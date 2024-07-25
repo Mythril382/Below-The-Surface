@@ -1,0 +1,13 @@
+type: Wall
+health: 450
+armor: 1
+requirements: [
+    i1-ferron/6
+]
+category: defense
+research: {
+    parent: l1-cascade
+    requirements: [
+        i1-ferron/30
+    ]
+}

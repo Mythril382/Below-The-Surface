@@ -1,0 +1,6 @@
+color: 68d9bb
+charge: 0.6
+hiddenOnPlanets: [
+    serpulo
+    erekir
+]

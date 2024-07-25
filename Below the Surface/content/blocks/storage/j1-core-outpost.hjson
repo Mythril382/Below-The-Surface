@@ -1,0 +1,19 @@
+type: CoreBlock
+alwaysUnlocked: true
+itemCapacity: 5000
+health: 3500
+armor: 5
+size: 3
+isFirstTier: true
+unitType: a1-tetra
+requirements: [
+    i1-ferron/4000
+    i2-oxium/2500
+]
+category: effect
+research: {
+    planet: p2-zylaris
+    root: true
+    name: Zylaris
+    requiresUnlock: false
+}

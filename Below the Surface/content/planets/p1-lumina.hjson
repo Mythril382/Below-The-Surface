@@ -1,0 +1,26 @@
+mesh: {
+    type: SunMesh
+    divisions: 4
+    octaves: 5
+    persistence: 0.75
+    scl: 0.8
+    pow: 1
+    mag: 0.5
+    colorScale: 1
+    colors: [
+        1decff
+        5bfffb
+        74dcff
+        19f4ff
+        53d8ff
+    ]
+}
+orbitSpacing: 90
+radius: 30
+drawOrbit: false
+orbitRadius: 12000
+accessible: false
+bloom: true
+hasAtmosphere: false
+parent: sun
+solarSystem: p1-lumina

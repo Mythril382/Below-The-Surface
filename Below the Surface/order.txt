@@ -1,0 +1,15 @@
+a - Factories
+b - Walls
+c - Effects
+d - Miscellaneous Blocks
+e - Item Distributors
+f - Pumps
+g - Liquid Distributors
+h - Power Generators
+i - Drills
+j - Cores
+k - Storage Blocks
+l - Turrets
+m - Unit Factories
+n - Unit Effects
+o - Payload Blocks

@@ -1,0 +1,14 @@
+type: Wall
+health: 1800
+armor: 1
+size: 2
+requirements: [
+    i1-ferron/24
+]
+category: defense
+research: {
+    parent: b1-ferron-wall
+    requirements: [
+        i1-ferron/90
+    ]
+}

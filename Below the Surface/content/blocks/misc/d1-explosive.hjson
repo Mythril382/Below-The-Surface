@@ -1,0 +1,202 @@
+type: PowerTurret
+breakable: false
+rebuildable: false
+enableDrawStatus: false
+targetable: false
+destroyBullet: {
+    pierce: true
+    pierceBuilding: true
+    type: ExplosionBulletType
+    hitEffect: none
+    despawnEffect: none
+    smokeEffect: none
+    killShooter: false
+    splashDamage: 25
+    splashDamageRadius: 48
+    rangeOverride: 48
+}
+destroySound: largeExplosion
+range: 48
+rotateSpeed: 0
+fogRadiusMultiplier: 0
+shootY: 0
+minWarmup: 1
+playerControllable: false
+alwaysShooting: true
+shootSound: none
+shootWarmupSpeed: 0.01
+linearWarmup: true
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: RegionPart
+            suffix: -main
+            outline: false
+            growProgress: {
+                type: warmup
+                op: curve
+                interp: bounceIn
+            }
+            growX: 0.5
+            growY: 0.5
+            moves: [
+                {
+                    progress: {
+                        type: warmup
+                        ops: [
+                            {
+                                op: compress
+                                start: 0
+                                end: 0.925
+                            }
+                            {
+                                op: mod
+                                amount: 0.05
+                            }
+                            {
+                                op: mul
+                                amount: 10
+                            }
+                            {
+                                op: mul
+                                other: {
+                                    type: warmup
+                                }
+                            }
+                        ]
+                    }
+                    rot: 45
+                }
+                {
+                    progress: {
+                        type: warmup
+                        ops: [
+                            {
+                                op: compress
+                                start: 0.025
+                                end: 1
+                            }
+                            {
+                                op: mod
+                                amount: 0.05
+                            }
+                            {
+                                op: mul
+                                amount: 10
+                            }
+                            {
+                                op: mul
+                                other: {
+                                    type: warmup
+                                }
+                            }
+                        ]
+                    }
+                    rot: -45
+                }
+            ]
+        }
+        {
+            type: RegionPart
+            suffix: -flash
+            outline: false
+            progress: {
+                type: warmup
+                op: curve
+                interp: bounceIn
+            }
+            growProgress: {
+                type: warmup
+                op: curve
+                interp: bounceIn
+            }
+            blending: additive
+            growX: 0.5
+            growY: 0.5
+            color: ffffff00
+            colorTo: ffffff
+            moves: [
+                {
+                    progress: {
+                        type: warmup
+                        ops: [
+                            {
+                                op: compress
+                                start: 0
+                                end: 0.925
+                            }
+                            {
+                                op: mod
+                                amount: 0.05
+                            }
+                            {
+                                op: mul
+                                amount: 10
+                            }
+                            {
+                                op: mul
+                                other: {
+                                    type: warmup
+                                }
+                            }
+                        ]
+                    }
+                    rot: 45
+                }
+                {
+                    progress: {
+                        type: warmup
+                        ops: [
+                            {
+                                op: compress
+                                start: 0.025
+                                end: 1
+                            }
+                            {
+                                op: mod
+                                amount: 0.05
+                            }
+                            {
+                                op: mul
+                                amount: 10
+                            }
+                            {
+                                op: mul
+                                other: {
+                                    type: warmup
+                                }
+                            }
+                        ]
+                    }
+                    rot: -45
+                }
+            ]
+        }
+    ]
+}
+shootType: {
+    type: BulletType
+    speed: 0
+    damage: 0
+    hitEffect: none
+    despawnEffect: none
+    shootEffect: {
+        type: WaveEffect
+        lifetime: 15
+        sizeTo: 48
+        interp: exp5Out
+    }
+    smokeEffect: none
+    killShooter: true
+    instantDisappear: true
+    collides: false
+    hittable: false
+    reflectable: false
+    absorbable: false
+    # despawnSpawnUnit: mono
+}
+requirements: [
+    i3-stalium-alloy/25
+]
+category: effect

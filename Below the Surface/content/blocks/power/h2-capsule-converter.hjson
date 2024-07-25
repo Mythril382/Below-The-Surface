@@ -1,0 +1,36 @@
+type: ConsumeGenerator
+consumes: {
+    items: [
+        i4-power-capsule/1
+    ]
+}
+powerProduction: 1
+drawer: [
+    {
+        type: DrawRegion
+        suffix: -bottom
+    }
+    {
+        type: DrawWarmupRegion
+        sinMag: 0
+        color: ffffff
+    }
+    {
+        type: DrawFade
+        suffix: -fade
+        alpha: 1
+        scale: 10
+    }
+    {
+        type: DrawRegion
+        suffix: -weave
+        rotateSpeed: 6
+    }
+    {}
+]
+itemDuration: 60
+requirements: [
+    i1-ferron/15
+    i3-stalium-alloy/10
+]
+category: power

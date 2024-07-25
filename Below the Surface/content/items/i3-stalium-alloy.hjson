@@ -1,0 +1,7 @@
+color: 95bfaa
+cost: 1
+healthScaling: 0.4
+hiddenOnPlanets: [
+    serpulo
+    erekir
+]

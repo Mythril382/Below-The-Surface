@@ -1,0 +1,6 @@
+type: Prop
+variants: 3
+breakSound: plantBreak
+lightColor: ff00ff40
+emitLight: true
+lightRadius: 16

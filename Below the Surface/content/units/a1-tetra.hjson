@@ -1,0 +1,140 @@
+type: legs
+alwaysUnlocked: true
+speed: 1.5
+drag: 0.075
+hitSize: 13.5
+stepShake: 0
+rippleScale: 0.25
+health: 250
+armor: 1
+groundLayer: 74
+buildSpeed: 1.1
+shadowElevation: 0.25
+allowLegStep: true
+legPhysicsLayer: false
+hovering: true
+drawBuildBeam: false
+weapons: [
+    {
+        type: BuildWeapon
+        mirror: false
+        rotate: false
+        shootY: 6.125
+        x: 0
+    }
+    {
+        bullet: {
+            type: BasicBulletType
+            lifetime: 54
+            speed: 2.5
+            damage: 20
+            rangeOverride: 135
+            homingPower: 0.15
+            homingDelay: 6.75
+            width: 7
+            height: 9
+        }
+        mirror: false
+        reload: 60
+        shootY: 6.125
+        x: 0
+        shoot: {
+            type: ShootSpread
+            shots: 3
+            shotDelay: 5
+            spread: 15
+        }
+        shootCone: 22.5
+        minWarmup: 0.95
+        shootSound: shoot
+    }
+    /* {
+        bullet: {
+            type: ContinuousLaserBulletType
+            lifetime: 4
+            damage: 0
+            laserAbsorb: false
+            hitEffect: none
+            smokeEffect: none
+            collides: false
+            incendAmount: 0
+            lightColor: fbd367
+            length: 72
+            shake: 0
+            fadeTime: 0
+            lightStroke: 12
+            colors: [
+                00000000
+            ]
+        }
+        display: false
+        mirror: false
+        controllable: false
+        aiControllable: false
+        alwaysShooting: true
+        x: 0
+        y: 6.75
+        shoot: {
+            type: ShootSpread
+            shots: 16
+            spread: 5.625
+        }
+        noAttack: true
+        shootSound: none
+    } */
+]
+parts: [
+    {
+        type: RegionPart
+        weaponIndex: 1
+        suffix: -build
+        progress: {
+            type: warmup
+            op: curve
+            interp: exp5
+        }
+        layerOffset: -0.002
+        outlineLayerOffset: -0.0001
+        y: 3.5
+        moveY: -5.5
+    }
+    {
+        type: RegionPart
+        weaponIndex: 1
+        suffix: -weapon
+        progress: {
+            type: warmup
+            op: curve
+            interp: exp5
+        }
+        layerOffset: -0.001
+        outlineLayerOffset: -0.0001
+        y: -2
+        moveY: 5.5
+        moves: [
+            {
+                progress: {
+                    type: recoil
+                    op: curve
+                    interp: bounceIn
+                }
+                y: -1
+            }
+        ]
+    }
+]
+outlineColor: 473740
+itemCapacity: 40
+mineTier: 1
+mineSpeed: 7
+legForwardScl: 2
+legLength: 10
+legBaseOffset: 5
+legExtension: -5
+legMaxLength: 1
+legMinLength: 0.25
+legStraightness: 0.25
+lockLegBase: true
+legContinuousMove: true
+flipBackLegs: true
+research: j1-core-outpost

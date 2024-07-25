@@ -1,0 +1,105 @@
+type: flying
+speed: 3
+rotateSpeed: 15
+drag: 0.008
+accel: 0.02
+hitSize: 12.75
+health: 200
+range: 120
+trailLength: 16
+flying: true
+targetAir: false
+faceTarget: false
+circleTarget: true
+weapons: [
+    {
+        bullet: {
+            type: RailBulletType
+            damage: 40
+            pierce: false
+            pierceBuilding: false
+            shootEffect: none
+            smokeEffect: none
+            hitSound: bolt
+            hitSoundVolume: 0.5
+            pierceEffect: {
+                type: ParticleEffect
+                lifetime: 14
+                particles: 6
+                length: 15
+                colorTo: 7883ff
+                line: true
+                strokeFrom: 1.5
+                strokeTo: 0.5
+                lenFrom: 4
+                lenTo: 1
+                cap: false
+            }
+            length: 4.75
+        }
+        mirror: false
+        rotate: false
+        controllable: false
+        aiControllable: false
+        alwaysShooting: true
+        reload: 2
+        recoilTime: 120
+        x: 0
+        minShootVelocity: 2.5
+        soundPitchMin: 1
+        shootSound: sprint
+    }
+    /* {
+        bullet: {
+            type: ContinuousLaserBulletType
+            lifetime: 4
+            damage: 0
+            laserAbsorb: false
+            hitEffect: none
+            smokeEffect: none
+            collides: false
+            incendAmount: 0
+            lightColor: 7883ff
+            length: 72
+            shake: 0
+            fadeTime: 0
+            lightStroke: 12
+            colors: [
+                00000000
+            ]
+        }
+        display: false
+        mirror: false
+        controllable: false
+        aiControllable: false
+        alwaysShooting: true
+        x: 0
+        y: 6.375
+        shoot: {
+            type: ShootSpread
+            shots: 8
+            spread: 5.625
+        }
+        noAttack: true
+        shootSound: none
+    } */
+]
+lightColor: 7883ff
+parts: [
+    {
+        type: RegionPart
+        suffix: -spike
+        mirror: true
+        progress: {
+            type: recoil
+            op: curve
+            interp: exp5Out
+        }
+        layerOffset: -0.001
+        x: -3.75
+        moveX: 3
+        moveY: 5
+    }
+]
+outlineColor: 473740
+itemCapacity: 0

@@ -1,0 +1,91 @@
+type: MassDriver
+health: 140
+size: 2
+range: 80
+rotateSpeed: 3
+translation: 2.5
+knockback: 1
+reload: 90
+shake: 1
+outlineColor: 473740
+shootEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            lifetime: 90
+            particles: 10
+            cone: 45
+            length: 24
+            interp: exp5Out
+            sizeInterp: exp5In
+            region: below-diamond
+        }
+        {
+            type: WaveEffect
+            lifetime: 90
+            sizeTo: 16
+            sides: 6
+            interp: exp5Out
+        }
+    ]
+}
+receiveEffect: {
+    type: WaveEffect
+    lifetime: 30
+    sizeFrom: 12
+    sizeTo: 0
+    sides: 6
+    interp: exp5Out
+}
+bulletSpeed: 2
+bulletLifetime: 60
+bullet: {
+    trailColor: ffffff
+    trailInterval: 7.5
+    trailRotation: true
+    trailLength: 24
+    trailEffect: {
+        type: ParticleEffect
+        lifetime: 60
+        particles: 1
+        length: 0
+        colorTo: ffffff00
+        sizeFrom: 0
+        sizeTo: 8
+        region: below-halo
+        interp: exp5Out
+    }
+    hitEffect: {
+        type: WaveEffect
+        lifetime: 60
+        sizeTo: 2
+        sides: 6
+        interp: exp5Out
+    }
+    despawnEffect: {
+        type: ParticleEffect
+        lifetime: 60
+        particles: 10
+        cone: 360
+        length: 12
+        interp: exp5Out
+        sizeInterp: exp5In
+        sizeFrom: 1
+    }
+    backColor: ffffff
+    frontColor: ffffff
+    width: 8
+    height: 8
+    sprite: circle-bullet
+}
+requirements: [
+    i1-ferron/10
+]
+category: distribution
+research: {
+    parent: j1-core-outpost
+    requirements: [
+        i1-ferron/5
+    ]
+}

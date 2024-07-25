@@ -1,0 +1,9 @@
+color: 70797d
+hardness: 1
+cost: 0.5
+healthScaling: 0.4
+hiddenOnPlanets: [
+    serpulo
+    erekir
+]
+research: j1-core-outpost

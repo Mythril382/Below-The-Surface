@@ -1,0 +1,73 @@
+alwaysUnlocked: true
+mesh: [
+    {
+        type: NoiseMesh
+        seed: 0
+        divisions: 6
+        radius: 0.85
+        octaves: 5
+        persistence: 0.75
+        scale: 0.75
+        mag: 1.25
+        color1: 695c53
+        color2: 967a60
+    }
+    {
+        type: NoiseMesh
+        seed: 0
+        divisions: 6
+        radius: 0.8
+        octaves: 5
+        persistence: 1
+        scale: 5
+        mag: 1.5
+        color: 312f2f
+    }
+]
+cloudMesh: [
+    {
+        type: HexSkyMesh
+        seed: 0
+        speed: 0.7
+        radius: 0.05
+        divisions: 7
+        color: e2d5b49b
+        octaves: 4
+        persistence: 0.5
+        scale: 0.5
+        thresh: 0.35
+    }
+    {
+        type: HexSkyMesh
+        seed: 0
+        speed: 0.4
+        radius: 0.035
+        divisions: 8
+        color: dbbb69a4
+        octaves: 5
+        persistence: 0.5
+        scale: 0.5
+        thresh: 0.4
+    }
+]
+generator: PlanetGenerator
+radius: 1
+sectorSize: 3
+orbitRadius: 100
+atmosphereRadIn: -0.075
+atmosphereRadOut: 0.3
+startSector: 2
+landCloudColor: dbbb69a4
+atmosphereColor: d5bd7e
+iconColor: d2b875
+clearSectorOnLose: true
+allowLaunchToNumbered: false
+defaultCore: j1-core-outpost
+parent: p1-lumina
+solarSystem: p1-lumina
+itemWhitelist: [
+    i1-ferron
+    i2-oxium
+    i3-stalium-alloy
+    i4-power-capsule
+]

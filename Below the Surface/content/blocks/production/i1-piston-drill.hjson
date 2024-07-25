@@ -1,0 +1,104 @@
+type: BurstDrill
+itemCapacity: 20
+size: 2
+tier: 1
+drillTime: 300
+drillEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: SeqEffect
+            layer: 35
+            effects: [
+                {
+                    type: ParticleEffect
+                    lifetime: 30
+                    clip: 9999
+                    layer: 35
+                    particles: 1
+                    cone: 0
+                    length: 0
+                    interp: bounceOut
+                    sizeFrom: 8
+                    sizeTo: 12
+                    region: below-i1-piston-drill-top
+                }
+                {
+                    type: ParticleEffect
+                    lifetime: 210
+                    clip: 9999
+                    layer: 35
+                    particles: 1
+                    cone: 0
+                    length: 0
+                    interp: smooth
+                    lightColor: 00000000
+                    sizeFrom: 12
+                    sizeTo: 8
+                    region: below-i1-piston-drill-top
+                }
+            ]
+        }
+        {
+            type: ParticleEffect
+            lifetime: 14
+            layer: 34
+            particles: 10
+            length: 15
+            colorFrom: ebc0ae
+            line: true
+            strokeFrom: 1.5
+            strokeTo: 0.5
+            lenFrom: 4
+            lenTo: 1
+            cap: false
+        }
+        {
+            type: WaveEffect
+            lifetime: 15
+            colorFrom: ebc0ae
+            colorTo: ebc0ae
+            sizeFrom: 10
+            sizeTo: 25
+            sides: 4
+            rotation: 45
+        }
+        {
+            type: WaveEffect
+            lifetime: 15
+            startDelay: 10
+            colorFrom: ebc0ae
+            colorTo: ebc0ae
+            sizeFrom: 10
+            sizeTo: 25
+            sides: 4
+            rotation: 45
+        }
+        {
+            type: WaveEffect
+            lifetime: 15
+            startDelay: 20
+            colorFrom: ebc0ae
+            colorTo: ebc0ae
+            sizeFrom: 10
+            sizeTo: 25
+            sides: 4
+            rotation: 45
+        }
+    ]
+}
+shake: 0
+arrowColor: 00000000
+baseArrowColor: 00000000
+glowColor: ebc0ae
+drillSound: none
+requirements: [
+    i1-ferron/12
+]
+category: production
+research: {
+    parent: j1-core-outpost
+    requirements: [
+        i1-ferron/10
+    ]
+}

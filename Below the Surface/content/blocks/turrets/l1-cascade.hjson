@@ -1,0 +1,124 @@
+type: ItemTurret
+armor: 1
+size: 2
+outlineColor: 1b2f38
+range: 124
+rotateSpeed: 10
+reload: 75
+inaccuracy: 30
+velocityRnd: 0.5
+shootCone: 10
+shoot: {
+    shots: 7
+}
+ammoUseEffect: {
+    type: ParticleEffect
+    lifetime: 30
+    layer: 100
+    colorFrom: e6a1acff
+    colorTo: a2a2a200
+    particles: 1
+    randLength: false
+    cone: 0
+    length: -8
+    interp: pow3Out
+    offsetX: -2.75
+    offsetY: -3.25
+    spin: 2
+    sizeFrom: 0.5
+    sizeTo: 0.5
+    offset: 45
+    region: below-casing
+}
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: RegionPart
+            suffix: -pump
+            progress: {
+                type: recoil
+                ops: [
+                    {
+                        op: inv
+                    }
+                    {
+                        op: compress
+                        start: 0
+                        end: 0.25
+                    }
+                    {
+                        op: curve
+                        interp: exp5In
+                    }
+                ]
+            }
+            x: -1.75
+            y: -1.75
+            moveX: 1.75
+            moveY: 1.75
+        }
+    ]
+    basePrefix: below-
+}
+ammoTypes: {
+    i1-ferron: {
+        type: BasicBulletType
+        lifetime: 180
+        speed: 7.5
+        damage: 23
+        drag: 0.05
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+                {
+                    type: ParticleEffect
+                    lifetime: 14
+                    particles: 6
+                    length: 15
+                    colorTo: b0bac0
+                    line: true
+                    strokeFrom: 1.5
+                    strokeTo: 0.5
+                    lenFrom: 4
+                    lenTo: 1
+                    cap: false
+                }
+                {
+                    type: WaveEffect
+                    lifetime: 14
+                    colorTo: b0bac0
+                    sizeTo: 4
+                    strokeFrom: 1.5
+                    strokeTo: 0.5
+                }
+            ]
+        }
+        despawnEffect: none
+        smokeEffect: none
+        trailColor: b0bac0
+        trailInterp: reverse
+        trailLength: 45
+        homingPower: 0.05
+        homingRange: 62
+        backColor: b0bac0
+        frontColor: ffffff
+        width: 4
+        height: 4
+        shrinkX: 1
+        shrinkY: 1
+        sprite: circle-bullet
+    }
+}
+requirements: [
+    i1-ferron/75
+    i2-oxium/50
+]
+category: turret
+research: {
+    parent: j1-core-outpost
+    requirements: [
+        i1-ferron/50
+        i2-oxium/30
+    ]
+}

@@ -1,0 +1,117 @@
+type: GenericCrafter
+size: 2
+outputItem: i3-stalium-alloy/2
+consumes: {
+    items: [
+        i1-ferron/2
+        sand/4
+    ]
+}
+craftTime: 45
+craftEffect: {
+    type: MultiEffect
+    effects: [
+        {
+            type: ParticleEffect
+            lifetime: 240
+            baseRotation: 45
+            layer: 111
+            particles: 1
+            randLength: false
+            colorFrom: 5f5f5f80
+            colorTo: 5f5f5f00
+            cone: 11.25
+            length: 48
+            lightOpacity: 0
+            sizeFrom: 0
+            sizeTo: 12
+            useRotation: false
+        }
+        {
+            type: ParticleEffect
+            lifetime: 240
+            startDelay: 9
+            baseRotation: 45
+            layer: 111
+            particles: 1
+            randLength: false
+            colorFrom: 5f5f5f80
+            colorTo: 5f5f5f00
+            cone: 11.25
+            length: 48
+            lightOpacity: 0
+            sizeFrom: 0
+            sizeTo: 12
+            useRotation: false
+        }
+        {
+            type: ParticleEffect
+            lifetime: 240
+            startDelay: 18
+            baseRotation: 45
+            layer: 111
+            particles: 1
+            randLength: false
+            colorFrom: 5f5f5f80
+            colorTo: 5f5f5f00
+            cone: 11.25
+            length: 48
+            lightOpacity: 0
+            sizeFrom: 0
+            sizeTo: 12
+            useRotation: false
+        }
+        {
+            type: ParticleEffect
+            lifetime: 240
+            startDelay: 27
+            baseRotation: 45
+            layer: 111
+            particles: 1
+            randLength: false
+            colorFrom: 5f5f5f80
+            colorTo: 5f5f5f00
+            cone: 11.25
+            length: 48
+            lightOpacity: 0
+            sizeFrom: 0
+            sizeTo: 12
+            useRotation: false
+        }
+        {
+            type: ParticleEffect
+            lifetime: 240
+            startDelay: 36
+            baseRotation: 45
+            layer: 111
+            particles: 1
+            randLength: false
+            colorFrom: 5f5f5f80
+            colorTo: 5f5f5f00
+            cone: 11.25
+            length: 48
+            lightOpacity: 0
+            sizeFrom: 0
+            sizeTo: 12
+            useRotation: false
+        }
+    ]
+}
+drawer: [
+    {}
+    {
+        type: DrawRegion
+        suffix: -shade
+        layer: 30.01
+    }
+    {
+        type: DrawRegion
+        suffix: -top
+        layer: 30.02
+    }
+]
+requirements: [
+    i1-ferron/75
+    i2-oxium/50
+]
+category: crafting
