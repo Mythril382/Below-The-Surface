@@ -1,0 +1,10 @@
+team: green
+research: {
+    parent: core-outpost
+    objectives: [
+        {
+            type: SectorComplete
+            preset: windswept-facility
+        }
+    ]
+}

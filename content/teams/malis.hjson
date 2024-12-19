@@ -1,0 +1,10 @@
+team: malis
+research: {
+    parent: core-bastion
+    objectives: [
+        {
+            type: SectorComplete
+            preset: onset
+        }
+    ]
+}

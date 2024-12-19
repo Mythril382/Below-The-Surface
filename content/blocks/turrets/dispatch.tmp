@@ -1,0 +1,37 @@
+type: PowerTurret
+armor: 1
+size: 2
+outlineColor: 1b2f38
+range: 224
+rotateSpeed: 12
+reload: 120
+inaccuracy: 5
+targetAir: false
+drawer: {
+    type: DrawTurret
+    parts: [
+        {
+            type: RegionPart
+            suffix: -building
+            outline: false
+            progress: reload
+            layer: 122
+            color: ffd37f00
+            colorTo: ffd37f
+        }
+        {
+            type: RegionPart
+            suffix: -preview
+            outline: false
+            progress: reload
+            color: ffffff
+            colorTo: ffffff00
+        }
+    ]
+}
+shootType: {
+    type: BulletType
+    shootEffect: none
+    smokeEffect: none
+    spawnUnit: dispatch-unit
+}

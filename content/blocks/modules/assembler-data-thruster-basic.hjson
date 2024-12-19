@@ -1,0 +1,8 @@
+type: Wall
+health: 5
+solid: false
+placeablePlayer: false
+requirements: [
+    ferron/50
+    stalium-alloy/25
+]

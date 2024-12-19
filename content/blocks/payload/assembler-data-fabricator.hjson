@@ -1,0 +1,12 @@
+type: Constructor
+size: 3
+filter: [
+    assembler-data-thruster-basic
+]
+maxBlockSize: 1
+requirements: [
+    ferron/200
+    oxium/150
+    stalium-alloy/150
+]
+category: units

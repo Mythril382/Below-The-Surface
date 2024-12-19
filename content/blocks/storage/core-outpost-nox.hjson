@@ -1,0 +1,8 @@
+type: CoreBlock
+itemCapacity: 5000
+health: 3500
+armor: 5
+size: 3
+buildVisibility: editorOnly
+isFirstTier: true
+unitType: tetra

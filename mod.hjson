@@ -1,0 +1,111 @@
+displayName: Below The Surface
+name: below
+author: Mythril
+description: 
+    '''
+    Below The Surface is a mod that adds a barren, lifeless planet... or is it?
+    
+    This mod is still W.I.P. Also, I suck at mapping, so expect bad maps.
+    '''
+subtitle: Work in progress...
+version: 0.1.0-alpha
+minGameVersion: 147
+repo: Mythril382/Below-The-Surface
+contentOrder: [
+    # Team Entries
+    derelict
+    sharded
+    crux
+    malis
+    nox
+    expanse
+    
+    # Items
+    ferron
+    oxium
+    sand2
+    stalium-alloy
+    power-capsule
+    
+    # Status Effects
+    # Internal
+    running
+    
+    # Unit Types
+    # Core Unit Types
+    tetra
+    # Hovership Unit Types
+    breeze
+    # Support Unit Types (Surface)
+    stratus
+    # Support Unit Types (Underground)
+    //unity
+    # Flying Unit Types (Surface)
+    sprint
+    dash
+    # Flying Unit Types (Underground)
+    rumble
+    # Environmental Unit Types (Surface)
+    dust-snail
+    shell-eater
+    # Internal Unit Types
+    dispatch-unit
+    
+    # Modules
+    assembler-data-thruster-basic
+    
+    # Blocks
+    # Blocks (Environment - Ruins)
+    ruin-floor
+    ruin-wall
+    plate1-1
+    plate1-2
+    
+    # Blocks (Environment - Dry Dirt)
+    dry-dirt
+    dry-dirt-wall
+    dry-dirt-boulder
+    
+    # Blocks (Environment - Dry Sand)
+    dry-sand
+    dry-sand-wall
+    
+    # Blocks (Environment - Moss)
+    moss-blanket
+    moss-particles
+    moss-flower
+    
+    # Blocks (Ore)
+    ore-ferron
+    ore-oxium
+    # Blocks (Factories)
+    stalium-smelter
+    # Blocks (Walls)
+    ferron-wall
+    ferron-wall-large
+    # Blocks (Miscellaneous)
+    explosive
+    # Blocks (Item Distribution)
+    resource-accelerator
+    # Blocks (Power)
+    power-converter
+    capsule-converter
+    # Blocks (Drills)
+    piston-drill
+    # Blocks (Cores)
+    core-outpost
+    # Blocks (Turrets)
+    cascade
+    # Blocks (Unit Factories)
+    assembler-data-fabricator
+    
+    # Weathers
+    desolate-winds
+    
+    # Planets
+    lumina
+    zylaris
+    
+    # Sector Presets
+    windswept-facility
+]

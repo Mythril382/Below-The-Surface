@@ -1,0 +1,510 @@
+type: flying
+speed: 2
+drag: 0.05
+accel: 0.09
+hitSize: 10
+health: 200
+engineSize: 0
+isEnemy: false
+flying: true
+canHeal: true
+canAttack: false
+controller: RepairAI
+weapons: [
+    {
+        bullet: {
+            type: BasicBulletType
+            lifetime: 60
+            speed: 1.47
+            damage: 0
+            layer: 90
+            hitEffect: none
+            despawnEffect: {
+                type: WaveEffect
+                lifetime: 30
+                colorFrom: ffd37f
+                colorTo: ffd37f
+                sizeTo: 12
+                interp: exp5Out
+            }
+            shootEffect: none
+            smokeEffect: none
+            collides: false
+            keepVelocity: false
+            scaleLife: true
+            hittable: false
+            reflectable: false
+            absorbable: false
+            despawnShake: 1
+            fragBullet: {
+                type: BasicBulletType
+                lifetime: 120
+                speed: 0
+                damage: 0
+                layer: 59
+                hitEffect: none
+                despawnEffect: none
+                shootEffect: none
+                smokeEffect: none
+                collides: false
+                hittable: false
+                reflectable: false
+                absorbable: false
+                ignoreSpawnAngle: true
+                fragBullet: {
+                    type: BasicBulletType
+                    lifetime: 300
+                    speed: 0
+                    damage: 0
+                    layer: 59
+                    hitEffect: none
+                    despawnEffect: none
+                    shootEffect: none
+                    smokeEffect: none
+                    collides: false
+                    hittable: false
+                    reflectable: false
+                    absorbable: false
+                    ignoreSpawnAngle: true
+                    fragBullet: {
+                        type: BasicBulletType
+                        lifetime: 180
+                        speed: 0
+                        damage: 0
+                        layer: 59
+                        hitEffect: none
+                        despawnEffect: {
+                            type: ParticleEffect
+                            lifetime: 120
+                            colorFrom: ffd37f
+                            colorTo: ffd37f
+                            particles: 1
+                            length: 0
+                            sizeFrom: 4.75
+                            region: below-sprayer-disappear
+                        }
+                        shootEffect: none
+                        smokeEffect: none
+                        collides: false
+                        hittable: false
+                        reflectable: false
+                        absorbable: false
+                        ignoreSpawnAngle: true
+                        parts: [
+                            {
+                                type: RegionPart
+                                name: below-sprayer-segment1
+                                layerOffset: 0.004
+                                outlineLayerOffset: -0.0031
+                                x: -1
+                                rotation: 90
+                            }
+                            {
+                                type: RegionPart
+                                name: below-sprayer-segment2
+                                progress: {
+                                    type: life
+                                    ops: [
+                                        {
+                                            op: compress
+                                            start: 0.66
+                                            end: 0.99
+                                        }
+                                        {
+                                            op: curve
+                                            interp: exp5In
+                                        }
+                                    ]
+                                }
+                                layerOffset: 0.003
+                                outlineLayerOffset: -0.0021
+                                x: -3
+                                rotation: 90
+                                moveX: 2
+                            }
+                            {
+                                type: RegionPart
+                                name: below-sprayer-segment3
+                                progress: {
+                                    type: life
+                                    op: compress
+                                    start: 0.66
+                                    end: 0.99
+                                }
+                                layerOffset: 0.002
+                                outlineLayerOffset: -0.0011
+                                x: -5
+                                rotation: 90
+                                moveX: 2
+                                moves: [
+                                    {
+                                        progress: {
+                                            type: life
+                                            ops: [
+                                                {
+                                                    op: compress
+                                                    start: 0.33
+                                                    end: 0.66
+                                                }
+                                                {
+                                                    op: curve
+                                                    interp: exp5In
+                                                }
+                                            ]
+                                        }
+                                        x: 2
+                                    }
+                                ]
+                            }
+                            {
+                                type: RegionPart
+                                name: below-sprayer-segment4
+                                progress: {
+                                    type: life
+                                    op: compress
+                                    start: 0.33
+                                    end: 0.99
+                                }
+                                layerOffset: 0.001
+                                outlineLayerOffset: -0.0001
+                                x: -7
+                                rotation: 90
+                                moveX: 4
+                                moves: [
+                                    {
+                                        progress: {
+                                            type: life
+                                            ops: [
+                                                {
+                                                    op: compress
+                                                    start: 0
+                                                    end: 0.33
+                                                }
+                                                {
+                                                    op: curve
+                                                    interp: exp5In
+                                                }
+                                            ]
+                                        }
+                                        x: 2
+                                    }
+                                ]
+                            }
+                        ]
+                        frontColor: ffffff
+                        width: 10
+                        height: 10
+                        shrinkY: 0
+                        sprite: below-sprayer-base
+                        backSprite: clear-effect
+                    }
+                    fragBullets: 1
+                    fragOffsetMin: 0
+                    fragOffsetMax: 0
+                    intervalBullet: {
+                        type: BulletType
+                        damage: 0
+                        hitEffect: none
+                        despawnEffect: {
+                            type: ParticleEffect
+                            lifetime: 180
+                            layer: 100
+                            colorFrom: 98ffa940
+                            colorTo: 98ffa900
+                            particles: 10
+                            cone: 360
+                            length: 40
+                            sizeFrom: 0
+                            sizeTo: 12
+                        }
+                        instantDisappear: true
+                        splashDamage: 0.5
+                        splashDamageRadius: 40
+                        shootEffect: none
+                        smokeEffect: none
+                        collides: false
+                        hittable: false
+                        reflectable: false
+                        absorbable: false
+                        healPercent: 1.25
+                    }
+                    bulletInterval: 15
+                    parts: [
+                        {
+                            type: RegionPart
+                            name: below-sprayer-segment1
+                            layerOffset: 0.004
+                            outlineLayerOffset: -0.0031
+                            x: -1
+                            rotation: 90
+                        }
+                        {
+                            type: RegionPart
+                            name: below-sprayer-segment2
+                            layerOffset: 0.003
+                            outlineLayerOffset: -0.0021
+                            x: -3
+                            rotation: 90
+                        }
+                        {
+                            type: RegionPart
+                            name: below-sprayer-segment3
+                            layerOffset: 0.002
+                            outlineLayerOffset: -0.0011
+                            x: -5
+                            rotation: 90
+                        }
+                        {
+                            type: RegionPart
+                            name: below-sprayer-segment4
+                            layerOffset: 0.001
+                            outlineLayerOffset: -0.0001
+                            x: -7
+                            rotation: 90
+                        }
+                    ]
+                    trailEffect: {
+                        type: MultiEffect
+                        effects: [
+                            {
+                                type: ParticleEffect
+                                lifetime: 15
+                                layer: 100
+                                followParent: false
+                                colorFrom: 98ffa900
+                                colorTo: 98ffa9bf
+                                particles: 1
+                                randLength: false
+                                cone: 5
+                                length: 6
+                                offsetX: 2
+                                offsetY: 7
+                                sizeFrom: 0
+                                sizeTo: 2
+                                useRotation: false
+                            }
+                            {
+                                type: ParticleEffect
+                                lifetime: 15
+                                baseRotation: 180
+                                layer: 100
+                                followParent: false
+                                colorFrom: 98ffa900
+                                colorTo: 98ffa9bf
+                                particles: 1
+                                randLength: false
+                                cone: 5
+                                length: 6
+                                offsetX: 2
+                                offsetY: -7
+                                sizeFrom: 0
+                                sizeTo: 2
+                                useRotation: false
+                            }
+                        ]
+                    }
+                    trailInterval: 1
+                    frontColor: ffffff
+                    width: 10
+                    height: 10
+                    shrinkY: 0
+                    sprite: below-sprayer-base
+                    backSprite: clear-effect
+                }
+                fragBullets: 1
+                fragOffsetMin: 0
+                fragOffsetMax: 0
+                parts: [
+                    {
+                        type: RegionPart
+                        name: below-sprayer-segment1
+                        layerOffset: 0.004
+                        outlineLayerOffset: -0.0031
+                        x: -1
+                        rotation: 90
+                    }
+                    {
+                        type: RegionPart
+                        name: below-sprayer-segment2
+                        progress: {
+                            type: life
+                            ops: [
+                                {
+                                    op: compress
+                                    start: 0
+                                    end: 0.33
+                                }
+                                {
+                                    op: curve
+                                    interp: exp5In
+                                }
+                            ]
+                        }
+                        layerOffset: 0.003
+                        outlineLayerOffset: -0.0021
+                        x: -1
+                        rotation: 90
+                        moveX: -2
+                    }
+                    {
+                        type: RegionPart
+                        name: below-sprayer-segment3
+                        progress: {
+                            type: life
+                            op: compress
+                            start: 0
+                            end: 0.33
+                        }
+                        layerOffset: 0.002
+                        outlineLayerOffset: -0.0011
+                        x: -1
+                        rotation: 90
+                        moveX: -2
+                        moves: [
+                            {
+                                progress: {
+                                    type: life
+                                    ops: [
+                                        {
+                                            op: compress
+                                            start: 0.33
+                                            end: 0.66
+                                        }
+                                        {
+                                            op: curve
+                                            interp: exp5In
+                                        }
+                                    ]
+                                }
+                                x: -2
+                            }
+                        ]
+                    }
+                    {
+                        type: RegionPart
+                        name: below-sprayer-segment4
+                        progress: {
+                            type: life
+                            op: compress
+                            start: 0
+                            end: 0.66
+                        }
+                        layerOffset: 0.001
+                        outlineLayerOffset: -0.0001
+                        x: -1
+                        rotation: 90
+                        moveX: -4
+                        moves: [
+                            {
+                                progress: {
+                                    type: life
+                                    ops: [
+                                        {
+                                            op: compress
+                                            start: 0.66
+                                            end: 0.99
+                                        }
+                                        {
+                                            op: curve
+                                            interp: exp5In
+                                        }
+                                    ]
+                                }
+                                x: -2
+                            }
+                        ]
+                    }
+                ]
+                frontColor: ffffff
+                width: 10
+                height: 10
+                shrinkY: 0
+                sprite: below-sprayer-base
+                backSprite: clear-effect
+            }
+            fragBullets: 1
+            fragOffsetMin: 0
+            fragOffsetMax: 0
+            frontColor: ffffff
+            width: 10
+            height: 10
+            shrinkX: 0.05
+            shrinkY: 0.05
+            spin: 1
+            sprite: below-sprayer-base
+            backSprite: clear-effect
+        }
+        display: false
+        mirror: false
+        rotate: true
+        rotateSpeed: 360
+        reload: 600
+        shootY: 0
+        x: 0
+        shootCone: 180
+        shootSound: bolt
+    }
+    /* {
+        bullet: {
+            type: ContinuousLaserBulletType
+            lifetime: 4
+            damage: 0
+            laserAbsorb: false
+            hitEffect: none
+            smokeEffect: none
+            collides: false
+            incendAmount: 0
+            lightColor: 98ffa9
+            length: 72
+            shake: 0
+            fadeTime: 0
+            lightStroke: 12
+            colors: [
+                00000000
+            ]
+        }
+        display: false
+        mirror: false
+        controllable: false
+        aiControllable: false
+        alwaysShooting: true
+        x: 0
+        y: 5
+        shoot: {
+            type: ShootSpread
+            shots: 12
+            spread: 5.625
+        }
+        noAttack: true
+        shootSound: none
+    } */
+]
+lightColor: 98ffa9
+engines: [
+    {
+        x: 4
+        y: 1
+        radius: 2
+        rotation: 0
+    }
+    {
+        x: -4
+        y: 1
+        radius: 2
+        rotation: 180
+    }
+    {
+        x: 3
+        y: -4.75
+        radius: 2
+        rotation: 315
+    }
+    {
+        x: -3
+        y: -4.75
+        radius: 2
+        rotation: 225
+    }
+]
+outlineColor: 473740
+itemCapacity: 0

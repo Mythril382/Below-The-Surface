@@ -1,0 +1,14 @@
+type: Wall
+health: 1800
+armor: 1
+size: 2
+requirements: [
+    ferron/24
+]
+category: defense
+research: {
+    parent: ferron-wall
+    requirements: [
+        ferron/90
+    ]
+}

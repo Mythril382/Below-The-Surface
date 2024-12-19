@@ -1,0 +1,12 @@
+type: missile
+template: MissileUnitType
+speed: 4.5
+rotateSpeed: 6.5
+missileAccelTime: 30
+engineSize: 0
+weapons: [
+    {
+        
+    }
+]
+outlineColor: 1b2f38

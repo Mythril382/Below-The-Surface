@@ -1,0 +1,10 @@
+team: crux
+research: {
+    parent: core-shard
+    objectives: [
+        {
+            type: SectorComplete
+            preset: groundZero
+        }
+    ]
+}

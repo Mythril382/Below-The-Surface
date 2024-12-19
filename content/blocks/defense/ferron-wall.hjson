@@ -1,0 +1,13 @@
+type: Wall
+health: 450
+armor: 1
+requirements: [
+    ferron/6
+]
+category: defense
+research: {
+    parent: cascade
+    requirements: [
+        ferron/30
+    ]
+}

@@ -1,0 +1,8 @@
+color: f7cba4
+lowPriority: true
+buildable: false
+hiddenOnPlanets: [
+    serpulo
+    erekir
+]
+research: ferron

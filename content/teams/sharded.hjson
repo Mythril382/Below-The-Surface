@@ -1,0 +1,5 @@
+alwaysUnlocked: true
+team: sharded
+research: {
+    parent: core-shard
+}
